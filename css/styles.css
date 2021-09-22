@@ -250,27 +250,24 @@ ul {
 
 .modal-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
-
   width: 30px;
   height: 30px;
+  right: 8px;
+  top: 8px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: unset;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .close-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-
-  width: 18px;
-  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button {
-  color: var(--color-black);
-  background-color: var(--border-color);
-  border: 1px solid rgba(0, 0, 0, 0, 1);
+.modal-button:hover .close-button,
+.modal-button:focus .close-button {
+  fill: var(--accent-color);
 }
 
 .row-flex__five-columns .column-item {
@@ -1095,7 +1092,9 @@ img {
 .check-text {
   color: var(--accent-color);
 }
-
+.agreement {
+  font-size: 14px;
+}
 .icon-check {
   display: flex;
   justify-content: center;
